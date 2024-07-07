@@ -1,7 +1,7 @@
 #' @import methods GenomicRanges
 NULL
 
-# R/classes.R
+# R/00_classes.R
 
 #' Gene Class
 #'
@@ -15,18 +15,17 @@ NULL
 #' @slot product List to store gene product(s).
 #' @export
 setClass(
-  "Gene",
-  contains = "VIRTUAL",
-  slots = list(
-    id = "character",
-    symbol = "character",
-    name = "character",
-    description = "character",
-    chromosome = "character",
-    start = "numeric",
-    end = "numeric",
-    product = "list"
-  )
+    "Gene",
+    contains = "VIRTUAL",
+    slots = list(
+        id = "character",
+        symbol = "character",
+        name = "character",
+        description = "character",
+        chromosome = "character",
+        start = "numeric",
+        end = "numeric",
+        product = "list")
 )
 
 #' ProteinCodingGene Class
@@ -37,12 +36,12 @@ setClass(
 #' @slot proteinSeq Protein sequence.
 #' @export
 setClass(
-  "ProteinCodingGene",
-  contains = "Gene",
-  slots = list(
-    proteinID = "character",
-    proteinSeq = "character"
-  )
+    "ProteinCodingGene",
+    contains = "Gene",
+    slots = list(
+        proteinID = "character",
+        proteinSeq = "character"
+        )
 )
 
 #' LncRNAGene Class
@@ -53,12 +52,12 @@ setClass(
 #' @slot RNASeq RNA sequence.
 #' @export
 setClass(
-  "lncRNAGene",
-  contains = "Gene",
-  slots = list(
-    lncRNAID = "character",
-    RNASeq = "character"
-  )
+    "lncRNAGene",
+    contains = "Gene",
+    slots = list(
+        lncRNAID = "character",
+        RNASeq = "character"
+        )
 )
 
 #' microRNAGene Class
@@ -69,10 +68,10 @@ setClass(
 #' @slot seedSeq Seed sequence of microRNA.
 #' @export
 setClass(
-  "microRNAGene",
-  contains = "Gene",
-  slots = list(
-    microRNAID = "character",
-    seedSeq = "character"
-  )
+    "microRNAGene",
+    contains = "Gene",
+    slots = list(
+        microRNAID = "character",
+        seedSeq = "character"
+        )
 )

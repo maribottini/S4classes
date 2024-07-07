@@ -1,4 +1,4 @@
-# R/methods.R
+# R/02_ClassSpecificFunction.R
 
 #' Length of gene product
 #'
@@ -24,7 +24,7 @@ setGeneric("lengthProduct", function(gene) standardGeneric("lengthProduct"))
 #' @param gene An object of class ProteinCodingGene.
 #' @return The length of the protein sequence.
 #' @examples
-#' # example code for the Lenght Product of an object of class ProteinCodingGene:
+#' # example code for the Lenght Product for ProteinCodingGene:
 #' pc_gene <- new("ProteinCodingGene",
 #'   id = "gene2", symbol = "GEN2", name = "Protein Coding Gene",
 #'   description = "Some protein coding gene", chromosome = "X",
@@ -33,7 +33,7 @@ setGeneric("lengthProduct", function(gene) standardGeneric("lengthProduct"))
 #' lengthProduct(pc_gene)
 #' @export
 setMethod("lengthProduct", "ProteinCodingGene", function(gene) {
-  nchar(gene@product$proteinSeq)
+    nchar(gene@product$proteinSeq)
 })
 
 #' Length of lncRNA product
@@ -52,7 +52,7 @@ setMethod("lengthProduct", "ProteinCodingGene", function(gene) {
 #' lengthProduct(lnc_gene)
 #' @export
 setMethod("lengthProduct", "lncRNAGene", function(gene) {
-  nchar(gene@product$RNASeq)
+    nchar(gene@product$RNASeq)
 })
 
 #' Length of microRNA product
@@ -71,6 +71,6 @@ setMethod("lengthProduct", "lncRNAGene", function(gene) {
 #' lengthProduct(mir_gene)
 #' @export
 setMethod("lengthProduct", "microRNAGene", function(gene) {
-  nchar(gene@product$seedSeq)
+    nchar(gene@product$seedSeq)
 })
 

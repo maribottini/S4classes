@@ -11,8 +11,8 @@ vignette: >
 
 ```{r, include = FALSE}
 knitr::opts_chunk$set(
-  collapse = TRUE,
-  comment = "#>"
+    collapse = TRUE,
+    comment = "#>"
 )
 ```
 
@@ -21,62 +21,66 @@ library(S4classes)
 ```
 
 # Introduction:
-It provides a set of S4 classes for Protein-coding genes, lncRNA e microRNA which are inherited from a virtual gene class that represents genes in general.
+It provides a set of S4 classes for Protein-coding genes, lncRNA e microRNA.
+Those classes are inherited from a virtual gene class.
 
 # Creating a new Protein-coding gene object:
-It should inherit all the gene class information, plus proteinID and proteinSeq. Creating a new Protein-coding gene **ProteinCodingGene** is easy as shown in this example:
+It inherit all the gene class information, plus proteinID & proteinSeq.
+Creating **ProteinCodingGene** example:
 ```{r}
 tp53 <- ProteinCodingGene(
-  id = "ENSG00000141510",
-  symbol = "TP53",
-  name = "TP53 gene",
-  description = "Tumor protein p53",
-  chromosome = "chr17",
-  start = 7668402, 
-  end = 7687550,
-  proteinID = "P04637",
-  proteinSeq = "MAQEGTNLRVEYLDDLRNGNRK"
+    id = "ENSG00000141510",
+    symbol = "TP53",
+    name = "TP53 gene",
+    description = "Tumor protein p53",
+    chromosome = "chr17",
+    start = 7668402, 
+    end = 7687550,
+    proteinID = "P04637",
+    proteinSeq = "MAQEGTNLRVEYLDDLRNGNRK"
 )
 
 ```
- 
+
 # Creating a new long-non-coding RNA object:
-It should inherit all the gene class information, plus lncRNAID and lncRNASeq. Creating a new lncRNA gene **lncRNAGene** is easy as shown in this example:
+It should inherit all the gene class information, plus lncRNAID and lncRNASeq. 
+Creating a new lncRNA gene **lncRNAGene** is easy as shown in this example:
 ```{r}
 lncRNA_gene2 <- lncRNAGene(
-  id = "ENSG00000276085",
-  symbol = "NEAT1",
-  name = "NEAT1 gene",
-  description = "Nuclear Paraspeckle Assembly Transcript 1",
-  chromosome = "chr11", 
-  start = 65497758, 
-  end = 65503100,
-  lncRNAID = "ENST00000463720",
-  RNASeq = "GUCCAUCGGGUCCUCGAGAGCUUAGAGUU"
+    id = "ENSG00000276085",
+    symbol = "NEAT1",
+    name = "NEAT1 gene",
+    description = "Nuclear Paraspeckle Assembly Transcript 1",
+    chromosome = "chr11", 
+    start = 65497758, 
+    end = 65503100,
+    lncRNAID = "ENST00000463720",
+    RNASeq = "GUCCAUCGGGUCCUCGAGAGCUUAGAGUU"
 )
 
 ```
 
 # Creating a new microRNA object:
-It should inherit all the gene class information, plus microRNAID and seedSeq. Creating a new miRNA **microRNAGene** is easy as shown in this example:
+It should inherit all the gene class information, plus microRNAID and seedSeq.
+Creating a new miRNA **microRNAGene** is easy as shown in this example:
 ```{r}
 miRNA_gene <- microRNAGene(
-  id = "ENSG00000277483",
-  symbol = "MIR155",
-  name = "miR-155 gene",
-  description = "microRNA 155",
-  chromosome = "chr21",
-  start = 25575833, 
-  end = 25575902,
-  microRNAID = "MI0000681",
-  seedSeq = "UUAAUGCUAAUUGUGAUAGGGGU"
+    id = "ENSG00000277483",
+    symbol = "MIR155",
+    name = "miR-155 gene",
+    description = "microRNA 155",
+    chromosome = "chr21",
+    start = 25575833, 
+    end = 25575902,
+    microRNAID = "MI0000681",
+    seedSeq = "UUAAUGCUAAUUGUGAUAGGGGU"
 )
 
 ```
 
 # Symbol:
-in order to get or set a new symbol gene,  such that the user does not
-need to directly access data slots.
+In order to get or set a new symbol gene; 
+Such that the user does not need to directly access data slots.
 
 ## Getting Symbol:
 Getting Symbol **GetSymbol** is easy as shown in this example:
@@ -121,7 +125,8 @@ setStart(lncRNA_gene2, 50)
 ```
 
 # Getting Lenght Product:
-which returns the length of the product of a specific gene object (e.g., length of the encoded protein for a protein-coding genes, length of the RNA for an lncRNA gene, length of the final miRNA for a microRNA). Getting **lengthProduct** is as easy as shown in this example:
+which returns the length of the product of a specific gene object.
+Getting **lengthProduct** is as easy as shown in this example:
 ```{r}
 lengthProduct(tp53)
 ```
