@@ -1,0 +1,35 @@
+Package: S4classes
+Type: Package
+Title: R package for gene objects which represent different gene types
+Version: 0.1.0
+Authors@R: 
+    person(given = "Mariachiara",
+           family = "Bottini",
+           role = c("aut", "cre"),
+           email = "mariachiara.bottini@mail.polimi.it",
+           comment = c(ORCID = "0009-0001-4957-3323"))
+Description: It provides a set of S4 classes for different gene types (e.g., protein-coding gene,
+    long non-coding RNA gene, microRNA gene, ...) which are inherited from a virtual gene class
+    that represents genes in general. Each gene should contain information about its ID
+    (e.g., Ensembl ID or NCBI gene ID), HUGO symbol, gene name, description, gene structure
+    (chromosome, start, end, strand, exons, e.g., as GRanges object) and gene product(s) 
+    (e.g., protein ID, protein sequence, lncRNA ID, RNA sequence, microRNA ID, microRNA seed 
+    sequence, etc.). Think about what information is generic and applicable to all genes and 
+    what information is meaningful only for specific gene types. Provide constructor functions 
+    and where appropriate accessor functions, e.g., "symbol(gene)" for both getting and setting 
+    the symbol information of a gene object, such that the user does not need to directly access 
+    data slots (e.g., with "gene@symbol"). Provide a class-specific function "lengthProduct(gene)" 
+    which returns the length of the product of a specific gene object (e.g., length of the encoded 
+    protein for a protein-coding gene, length of the RNA for an lncRNA gene, length of the final 
+    miRNA for a microRNA gene, etc.). This package is designed to be compatible with Bioconductor standards.
+License: GPL-3
+Encoding: UTF-8
+RoxygenNote: 7.3.2
+Depends: 
+    R (>= 4.4)
+Imports: methods, GenomicRanges
+Suggests: testthat, knitr, rmarkdown
+VignetteBuilder: knitr
+biocViews: S4, Genetics, Transcriptomics, Bioinformatics, DataRepresentation
+URL: https://github.com/maribottini/S4classes
+BugReports: https://github.com/maribottini/S4classes/issues
