@@ -17,3 +17,11 @@ The updated gene object.
 \description{
 Set Start of a gene sequence
 }
+\examples{
+# example code for setting a new start to a gene sequence:
+gene <- new("ProteinCodingGene", id = "12345", symbol = "BRCA1", name = "Breast Cancer Gene 1",
+            description = "Gene involved in DNA repair", chromosome = "17", start = 43044295, end = 43125482,
+            product = list(proteinID = "P38398", proteinSeq = "MEEPQSDPSV..."))
+gene <- setStart(gene, 43040000)
+getStart(gene)
+}

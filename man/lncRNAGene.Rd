@@ -41,3 +41,17 @@ A new LncRNAGene object.
 \description{
 Creates a new LncRNAGene object.
 }
+\examples{
+# example code for creating a LncRNAGene object:
+lncRNA_gene2 <- lncRNAGene(
+id = "ENSG00000276085",
+symbol = "NEAT1",
+name = "NEAT1 gene",
+description = "Nuclear Paraspeckle Assembly Transcript 1",
+chromosome = "chr11",
+start = 65497758,
+end = 65503100,
+lncRNAID = "ENST00000463720",
+RNASeq = "GUCCAUCGGGUCCUCGAGAGCUUAGAGUU")
+print(lncRNA_gene2)
+}

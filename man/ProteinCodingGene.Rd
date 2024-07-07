@@ -41,3 +41,17 @@ A new ProteinCodingGene object.
 \description{
 Creates a new ProteinCodingGene object.
 }
+\examples{
+# example code for creating a ProteinCodingGene object
+tp53 <- ProteinCodingGene(
+id = "ENSG00000141510",
+symbol = "TP53",
+name = "TP53 gene",
+description = "Tumor protein p53",
+chromosome = "chr17",
+start = 7668402,
+end = 7687550,
+proteinID = "P04637",
+proteinSeq = "MAQEGTNLRVEYLDDLRNGNRK")
+print(tp53)
+}

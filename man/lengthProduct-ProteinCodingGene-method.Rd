@@ -15,3 +15,12 @@ The length of the protein sequence.
 \description{
 Method for ProteinCodingGene to get the length of the protein sequence.
 }
+\examples{
+# example code for the Lenght Product of an object of class ProteinCodingGene:
+pc_gene <- new("ProteinCodingGene",
+  id = "gene2", symbol = "GEN2", name = "Protein Coding Gene",
+  description = "Some protein coding gene", chromosome = "X",
+  start = 200, end = 6000,
+  product = list(proteinID = "P002", proteinSeq = "MEEPQSDPSV"))
+lengthProduct(pc_gene)
+}

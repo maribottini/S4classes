@@ -15,3 +15,12 @@ The length of the seed sequence.
 \description{
 Method for MicroRNAGene to get the length of the seed sequence.
 }
+\examples{
+# example code for the Length Product of an object of class MicroRNAGene:
+mir_gene <- new("microRNAGene",
+  id = "gene4", symbol = "MIR1", name = "MicroRNA Gene",
+  description = "A microRNA gene", chromosome = "21",
+  start = 400, end = 8000,
+  product = list(microRNAID = "MIR001", seedSeq = "ACGUACGUGA"))
+lengthProduct(mir_gene)
+}

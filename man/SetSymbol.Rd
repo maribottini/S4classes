@@ -17,3 +17,11 @@ The updated gene object.
 \description{
 Set symbol of a gene
 }
+\examples{
+# example code for setting a new symbol to a gene:
+gene <- new("ProteinCodingGene", id = "12345", symbol = "BRCA1", name = "Breast Cancer Gene 1",
+            description = "Gene involved in DNA repair", chromosome = "17", start = 43044295, end = 43125482,
+            product = list(proteinID = "P38398", proteinSeq = "MEEPQSDPSV..."))
+gene <- SetSymbol(gene, "BRCA1_new")
+GetSymbol(gene)
+}

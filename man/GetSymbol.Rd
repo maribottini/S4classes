@@ -15,3 +15,10 @@ The symbol of the gene.
 \description{
 Get symbol of a gene
 }
+\examples{
+# example code for getting the symbol of a gene:
+gene <- new("ProteinCodingGene", id = "12345", symbol = "BRCA1", name = "Breast Cancer Gene 1",
+            description = "Gene involved in DNA repair", chromosome = "17", start = 43044295, end = 43125482,
+            product = list(proteinID = "P38398", proteinSeq = "MEEPQSDPSV..."))
+GetSymbol(gene)
+}

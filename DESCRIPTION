@@ -30,6 +30,6 @@ Depends:
 Imports: methods, GenomicRanges
 Suggests: testthat, knitr, rmarkdown
 VignetteBuilder: knitr
-biocViews: S4, Genetics, Transcriptomics, Bioinformatics, DataRepresentation
+biocViews: Genetics, Transcriptomics, Bioinformatics, DataRepresentation
 URL: https://github.com/maribottini/S4classes
 BugReports: https://github.com/maribottini/S4classes/issues

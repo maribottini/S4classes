@@ -41,3 +41,17 @@ A new MicroRNAGene object.
 \description{
 Creates a new MicroRNAGene object.
 }
+\examples{
+# example code for creating a MicroRNAGene object:
+miRNA_gene <- microRNAGene(
+id = "ENSG00000277483",
+symbol = "MIR155",
+name = "miR-155 gene",
+description = "microRNA 155",
+chromosome = "chr21",
+start = 25575833,
+end = 25575902,
+microRNAID = "MI0000681",
+seedSeq = "UUAAUGCUAAUUGUGAUAGGGGU")
+print(miRNA_gene)
+}

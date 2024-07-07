@@ -15,3 +15,12 @@ The length of the RNA sequence.
 \description{
 Method for LncRNAGene to get the length of the RNA sequence.
 }
+\examples{
+# example code for the Lenght Product of an object of class LncRNAGene:
+lnc_gene <- new("lncRNAGene",
+  id = "gene3", symbol = "LNC1", name = "LncRNA Gene",
+  description = "A long non-coding RNA gene", chromosome = "11",
+  start = 300, end = 7000,
+  product = list(lncRNAID = "LNC001", RNASeq = "UUGUUCGACUGA"))
+lengthProduct(lnc_gene)
+}
