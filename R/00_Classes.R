@@ -1,30 +1,32 @@
 #' @import methods GenomicRanges
 NULL
 
-# R/00_classes.R
+# R/00_Classes.R
 
 #' Gene Class
 #'
 #' A virtual class to represent a gene with basic slots.
 #'
-#' @slot id Gene ID (e.g., Ensembl or NCBI).
-#' @slot symbol Gene symbol (e.g., HUGO symbol).
-#' @slot name Gene name.
-#' @slot description Description of the gene.
-#' @slot structure Genomic structure (chromosome, start, end, strand, exons).
-#' @slot product List to store gene product(s).
+#' @slot name Gene name
+#' @slot ID Gene ID (e.g., Ensembl or NCBI).
+#' @slot sym Gene symbol (e.g., HUGO symbol).
+#' @slot chr Gene chromosome
+#' @slot start Gene sequence
+#' @slot end Gene sequence
+#' @slot desc Description of the Gene.
+#' @slot product List to store Gene product(s).
 #' @export
 setClass(
     "Gene",
     contains = "VIRTUAL",
     slots = list(
-        id = "character",
-        symbol = "character",
         name = "character",
-        description = "character",
-        chromosome = "character",
+        ID = "character",
+        sym = "character", # Symbol
+        chr = "character", # Chromosome
         start = "numeric",
         end = "numeric",
+        desc = "character", # Description
         product = "list")
 )
 
@@ -65,13 +67,13 @@ setClass(
 #' A class to represent a microRNA gene.
 #'
 #' @slot microRNAID MicroRNA ID.
-#' @slot seedSeq Seed sequence of microRNA.
+#' @slot microRNASeq sequence of microRNA.
 #' @export
 setClass(
     "microRNAGene",
     contains = "Gene",
     slots = list(
         microRNAID = "character",
-        seedSeq = "character"
+        microRNASeq = "character"
         )
 )

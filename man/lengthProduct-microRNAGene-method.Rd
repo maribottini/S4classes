@@ -10,17 +10,17 @@
 \item{gene}{An object of class MicroRNAGene.}
 }
 \value{
-The length of the seed sequence.
+The length of the microRNA sequence.
 }
 \description{
-Method for MicroRNAGene to get the length of the seed sequence.
+Method for MicroRNAGene to get the length of the microRNA sequence.
 }
 \examples{
 # example code for the Length Product of an object of class MicroRNAGene:
-mir_gene <- new("microRNAGene",
-  id = "gene4", symbol = "MIR1", name = "MicroRNA Gene",
-  description = "A microRNA gene", chromosome = "21",
-  start = 400, end = 8000,
-  product = list(microRNAID = "MIR001", seedSeq = "ACGUACGUGA"))
-lengthProduct(mir_gene)
+miRNA_gene <- new("microRNAGene",
+  name = "MicroRNA Gene", ID = "gene4", sym = "MIR1",
+  chr = "21", start = 400, end = 8000,
+  desc = "A microRNA gene",
+  product = list(microRNAID = "MIR001", microRNASeq = "ACGUACGUGA"))
+lengthProduct(miRNA_gene)
 }

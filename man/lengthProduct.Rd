@@ -16,11 +16,11 @@ The length of the gene product.
 Generic function to get the length of the gene product.
 }
 \examples{
-# example code for the Lenght Product of an object of class Gene:
+# example code for the Length Product of an object of class Gene:
 gene <- new("ProteinCodingGene",
-  id = "gene1", symbol = "SYM1", name = "Gene One",
-  description = "Description here", chromosome = "1",
-  start = 100, end = 5000,
+  name = "Gene One", ID = "gene1", sym = "SYM1",
+  chr = "1", start = 100, end = 5000,
+  desc = "Description here",
   product = list(proteinID = "P001", proteinSeq = "MKTFFIVATVILFWP"))
 lengthProduct(gene)
 }

@@ -29,16 +29,16 @@ It inherit all the gene class information, plus proteinID & proteinSeq.
 Creating **ProteinCodingGene** example:
 ```{r}
 tp53 <- ProteinCodingGene(
-    id = "ENSG00000141510",
-    symbol = "TP53",
     name = "TP53 gene",
-    description = "Tumor protein p53",
-    chromosome = "chr17",
+    ID = "ENSG00000141510",
+    sym = "TP53",
+    chr = "chr17",
     start = 7668402, 
     end = 7687550,
-    proteinID = "P04637",
-    proteinSeq = "MAQEGTNLRVEYLDDLRNGNRK"
-)
+    desc = "Tumor protein p53",
+    proteinID = "P04637", 
+    proteinSeq = "MAQEGTNLRVEYLDDLRNGNRK")
+print(tp53)
 
 ```
 
@@ -47,13 +47,13 @@ It should inherit all the gene class information, plus lncRNAID and lncRNASeq.
 Creating a new lncRNA gene **lncRNAGene** is easy as shown in this example:
 ```{r}
 lncRNA_gene2 <- lncRNAGene(
-    id = "ENSG00000276085",
-    symbol = "NEAT1",
     name = "NEAT1 gene",
-    description = "Nuclear Paraspeckle Assembly Transcript 1",
-    chromosome = "chr11", 
+    ID = "ENSG00000276085",
+    sym = "NEAT1",
+    chr = "chr11", 
     start = 65497758, 
     end = 65503100,
+    desc = "Nuclear Paraspeckle Assembly Transcript 1",
     lncRNAID = "ENST00000463720",
     RNASeq = "GUCCAUCGGGUCCUCGAGAGCUUAGAGUU"
 )
@@ -65,15 +65,15 @@ It should inherit all the gene class information, plus microRNAID and seedSeq.
 Creating a new miRNA **microRNAGene** is easy as shown in this example:
 ```{r}
 miRNA_gene <- microRNAGene(
-    id = "ENSG00000277483",
-    symbol = "MIR155",
     name = "miR-155 gene",
-    description = "microRNA 155",
-    chromosome = "chr21",
+    ID = "ENSG00000277483",
+    sym = "MIR155",
+    chr = "chr21",
     start = 25575833, 
     end = 25575902,
+    desc = "microRNA 155",
     microRNAID = "MI0000681",
-    seedSeq = "UUAAUGCUAAUUGUGAUAGGGGU"
+    microRNASeq = "UUAAUGCUAAUUGUGAUAGGGGU"
 )
 
 ```

@@ -4,32 +4,22 @@
 \alias{ProteinCodingGene}
 \title{ProteinCodingGene Constructor}
 \usage{
-ProteinCodingGene(
-  id,
-  symbol,
-  name,
-  description,
-  chromosome,
-  start,
-  end,
-  proteinID,
-  proteinSeq
-)
+ProteinCodingGene(name, ID, sym, chr, start, end, desc, proteinID, proteinSeq)
 }
 \arguments{
-\item{id}{Gene ID.}
-
-\item{symbol}{Gene symbol.}
-
 \item{name}{Gene name.}
 
-\item{description}{Gene description.}
+\item{ID}{Gene ID.}
 
-\item{chromosome}{Gene Chromosome.}
+\item{sym}{Gene symbol.}
+
+\item{chr}{Gene Chromosome.}
 
 \item{start}{Gene Start.}
 
 \item{end}{Gene End.}
+
+\item{desc}{Gene description.}
 
 \item{proteinID}{Protein ID.}
 
@@ -44,13 +34,13 @@ Creates a new ProteinCodingGene object.
 \examples{
 # example code for creating a ProteinCodingGene object
 tp53 <- ProteinCodingGene(
-    id = "ENSG00000141510",
-    symbol = "TP53",
     name = "TP53 gene",
-    description = "Tumor protein p53",
-    chromosome = "chr17",
+    ID = "ENSG00000141510",
+    sym = "TP53",
+    chr = "chr17",
     start = 7668402,
     end = 7687550,
+    desc = "Tumor protein p53",
     proteinID = "P04637",
     proteinSeq = "MAQEGTNLRVEYLDDLRNGNRK"
 )

@@ -4,36 +4,26 @@
 \alias{microRNAGene}
 \title{MicroRNAGene Constructor}
 \usage{
-microRNAGene(
-  id,
-  symbol,
-  name,
-  description,
-  chromosome,
-  start,
-  end,
-  microRNAID,
-  seedSeq
-)
+microRNAGene(name, ID, sym, chr, start, end, desc, microRNAID, microRNASeq)
 }
 \arguments{
-\item{id}{Gene ID.}
-
-\item{symbol}{Gene symbol.}
-
 \item{name}{Gene name.}
 
-\item{description}{Gene description.}
+\item{ID}{Gene ID.}
 
-\item{chromosome}{Gene Chromosome.}
+\item{sym}{Gene symbol.}
 
-\item{start}{Gene Start.}
+\item{chr}{Gene chromosome.}
 
-\item{end}{Gene End.}
+\item{start}{Gene start position.}
+
+\item{end}{Gene end position.}
+
+\item{desc}{Gene description.}
 
 \item{microRNAID}{microRNA ID.}
 
-\item{seedSeq}{seed sequence of microRNA.}
+\item{microRNASeq}{seed sequence of microRNA.}
 }
 \value{
 A new MicroRNAGene object.
@@ -44,15 +34,15 @@ Creates a new MicroRNAGene object.
 \examples{
 # example code for creating a MicroRNAGene object:
 miRNA_gene <- microRNAGene(
-    id = "ENSG00000277483",
-    symbol = "MIR155",
     name = "miR-155 gene",
-    description = "microRNA 155",
-    chromosome = "chr21",
+    ID = "ENSG00000277483",
+    sym = "MIR155",
+    chr = "chr21",
     start = 25575833,
     end = 25575902,
+    desc = "microRNA 155",
     microRNAID = "MI0000681",
-    seedSeq = "UUAAUGCUAAUUGUGAUAGGGGU"
+    microRNASeq = "UUAAUGCUAAUUGUGAUAGGGGU"
 )
 print(miRNA_gene)
 }

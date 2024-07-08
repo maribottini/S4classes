@@ -12,6 +12,6 @@ A class to represent a microRNA gene.
 \describe{
 \item{\code{microRNAID}}{MicroRNA ID.}
 
-\item{\code{seedSeq}}{Seed sequence of microRNA.}
+\item{\code{microRNASeq}}{sequence of microRNA.}
 }}
 

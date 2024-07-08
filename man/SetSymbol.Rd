@@ -19,10 +19,9 @@ Set symbol of a gene
 }
 \examples{
 # example code for setting a new symbol to a gene:
-gene <- new("ProteinCodingGene", id = "12345", symbol = "BRCA1",
-    name = "Breast Cancer Gene 1",
-    description = "Gene involved in DNA repair", chromosome = "17",
-    start = 43044295, end = 43125482,
+gene <- new("ProteinCodingGene", name = "Breast Cancer Gene 1",
+    ID = "BC12345", sym = "BRCA1", chr = "17", start = 43044295,
+    end = 43125482, desc = "Gene involved in DNA repair",
     product = list(proteinID = "P38398", proteinSeq = "MEEPQSDPSV..."))
 gene <- SetSymbol(gene, "BRCA1_new")
 GetSymbol(gene)

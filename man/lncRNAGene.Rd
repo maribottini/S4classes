@@ -4,32 +4,22 @@
 \alias{lncRNAGene}
 \title{LncRNAGene Constructor}
 \usage{
-lncRNAGene(
-  id,
-  symbol,
-  name,
-  description,
-  chromosome,
-  start,
-  end,
-  lncRNAID,
-  RNASeq
-)
+lncRNAGene(name, ID, sym, chr, start, end, desc, lncRNAID, RNASeq)
 }
 \arguments{
-\item{id}{Gene ID.}
-
-\item{symbol}{Gene symbol.}
-
 \item{name}{Gene name.}
 
-\item{description}{Gene description.}
+\item{ID}{Gene ID.}
 
-\item{chromosome}{Gene Chromosome.}
+\item{sym}{Gene symbol.}
 
-\item{start}{Gene Start.}
+\item{chr}{Gene chromosome.}
 
-\item{end}{Gene End.}
+\item{start}{Gene start position.}
+
+\item{end}{Gene end position.}
+
+\item{desc}{Gene description.}
 
 \item{lncRNAID}{lncRNA ID.}
 
@@ -44,13 +34,13 @@ Creates a new LncRNAGene object.
 \examples{
 # example code for creating a LncRNAGene object:
 lncRNA_gene2 <- lncRNAGene(
-    id = "ENSG00000276085",
-    symbol = "NEAT1",
     name = "NEAT1 gene",
-    description = "Nuclear Paraspeckle Assembly Transcript 1",
-    chromosome = "chr11",
+    ID = "ENSG00000276085",
+    sym = "NEAT1",
+    chr = "chr11",
     start = 65497758,
     end = 65503100,
+    desc = "Nuclear Paraspeckle Assembly Transcript 1",
     lncRNAID = "ENST00000463720",
     RNASeq = "GUCCAUCGGGUCCUCGAGAGCUUAGAGUU"
 )

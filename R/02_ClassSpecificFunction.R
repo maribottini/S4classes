@@ -7,11 +7,11 @@
 #' @param gene An object of class Gene.
 #' @return The length of the gene product.
 #' @examples
-#' # example code for the Lenght Product of an object of class Gene:
+#' # example code for the Length Product of an object of class Gene:
 #' gene <- new("ProteinCodingGene",
-#'   id = "gene1", symbol = "SYM1", name = "Gene One",
-#'   description = "Description here", chromosome = "1",
-#'   start = 100, end = 5000,
+#'   name = "Gene One", ID = "gene1", sym = "SYM1",
+#'   chr = "1", start = 100, end = 5000,
+#'   desc = "Description here",
 #'   product = list(proteinID = "P001", proteinSeq = "MKTFFIVATVILFWP"))
 #' lengthProduct(gene)
 #' @export
@@ -24,11 +24,11 @@ setGeneric("lengthProduct", function(gene) standardGeneric("lengthProduct"))
 #' @param gene An object of class ProteinCodingGene.
 #' @return The length of the protein sequence.
 #' @examples
-#' # example code for the Lenght Product for ProteinCodingGene:
+#' # example code for the Length Product for ProteinCodingGene:
 #' pc_gene <- new("ProteinCodingGene",
-#'   id = "gene2", symbol = "GEN2", name = "Protein Coding Gene",
-#'   description = "Some protein coding gene", chromosome = "X",
-#'   start = 200, end = 6000,
+#'   name = "Protein Coding Gene", ID = "gene2", sym = "GEN2",
+#'   chr = "X", start = 200, end = 6000,
+#'   desc = "Some protein coding gene",
 #'   product = list(proteinID = "P002", proteinSeq = "MEEPQSDPSV"))
 #' lengthProduct(pc_gene)
 #' @export
@@ -43,11 +43,11 @@ setMethod("lengthProduct", "ProteinCodingGene", function(gene) {
 #' @param gene An object of class LncRNAGene.
 #' @return The length of the RNA sequence.
 #' @examples
-#' # example code for the Lenght Product of an object of class LncRNAGene:
+#' # example code for the Length Product of an object of class LncRNAGene:
 #' lnc_gene <- new("lncRNAGene",
-#'   id = "gene3", symbol = "LNC1", name = "LncRNA Gene",
-#'   description = "A long non-coding RNA gene", chromosome = "11",
-#'   start = 300, end = 7000,
+#'   name = "LncRNA Gene", ID = "gene3", sym = "LNC1",
+#'   chr = "11", start = 300, end = 7000,
+#'   desc = "A long non-coding RNA gene",
 #'   product = list(lncRNAID = "LNC001", RNASeq = "UUGUUCGACUGA"))
 #' lengthProduct(lnc_gene)
 #' @export
@@ -57,20 +57,19 @@ setMethod("lengthProduct", "lncRNAGene", function(gene) {
 
 #' Length of microRNA product
 #'
-#' Method for MicroRNAGene to get the length of the seed sequence.
+#' Method for MicroRNAGene to get the length of the microRNA sequence.
 #'
 #' @param gene An object of class MicroRNAGene.
-#' @return The length of the seed sequence.
+#' @return The length of the microRNA sequence.
 #' @examples
 #' # example code for the Length Product of an object of class MicroRNAGene:
-#' mir_gene <- new("microRNAGene",
-#'   id = "gene4", symbol = "MIR1", name = "MicroRNA Gene",
-#'   description = "A microRNA gene", chromosome = "21",
-#'   start = 400, end = 8000,
-#'   product = list(microRNAID = "MIR001", seedSeq = "ACGUACGUGA"))
-#' lengthProduct(mir_gene)
+#' miRNA_gene <- new("microRNAGene",
+#'   name = "MicroRNA Gene", ID = "gene4", sym = "MIR1",
+#'   chr = "21", start = 400, end = 8000,
+#'   desc = "A microRNA gene",
+#'   product = list(microRNAID = "MIR001", microRNASeq = "ACGUACGUGA"))
+#' lengthProduct(miRNA_gene)
 #' @export
 setMethod("lengthProduct", "microRNAGene", function(gene) {
-    nchar(gene@product$seedSeq)
+    nchar(gene@product$microRNASeq)
 })
-

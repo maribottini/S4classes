@@ -10,16 +10,20 @@ A virtual class to represent a gene with basic slots.
 \section{Slots}{
 
 \describe{
-\item{\code{id}}{Gene ID (e.g., Ensembl or NCBI).}
+\item{\code{name}}{Gene name}
 
-\item{\code{symbol}}{Gene symbol (e.g., HUGO symbol).}
+\item{\code{ID}}{Gene ID (e.g., Ensembl or NCBI).}
 
-\item{\code{name}}{Gene name.}
+\item{\code{sym}}{Gene symbol (e.g., HUGO symbol).}
 
-\item{\code{description}}{Description of the gene.}
+\item{\code{chr}}{Gene chromosome}
 
-\item{\code{structure}}{Genomic structure (chromosome, start, end, strand, exons).}
+\item{\code{start}}{Gene sequence}
 
-\item{\code{product}}{List to store gene product(s).}
+\item{\code{end}}{Gene sequence}
+
+\item{\code{desc}}{Description of the Gene.}
+
+\item{\code{product}}{List to store Gene product(s).}
 }}
 
